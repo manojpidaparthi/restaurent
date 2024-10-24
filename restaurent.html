@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 10px;
+            background-color: #444;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #f0a500;
+        }
+
+        .hero {
+            background-image: url('https://via.placeholder.com/1200x600');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .about, .menu, .contact {
+            background: #fff;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #333;
+        }
+
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .menu-item {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: left;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-item h3 {
+            margin: 0 0 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .menu-item p {
+            margin: 0;
+            color: #777;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form input, .contact-form textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            padding: 10px;
+            background-color: #f0a500;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #e69500;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Delicious Eats</h1>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="hero">
+        <h1>Welcome to Delicious Eats</h1>
+    </section>
+
+    <section class="section about" id="about">
+        <h2>About Us</h2>
+        <p>Welcome to Delicious Eats, where we serve the best food in town with a smile. Come and enjoy a variety of dishes made with fresh ingredients and love!</p>
+    </section>
+
+    <section class="section menu" id="menu">
+        <h2>Our Menu</h2>
+        <ul class="menu-items">
+            <li class="menu-item">
+                <h3>Spaghetti Carbonara</h3>
+                <p>$12.99</p>
+            </li>
+            <li class="menu-item">
+                <h3>Grilled Chicken Salad</h3>
+                <p>$10.99</p>
+            </li>
+            <li class="menu-item">
+                <h3>Margherita Pizza</h3>
+                <p>$9.99</p>
+            </li>
+            <li class="menu-item">
+                <h3>Cheeseburger</h3>
+                <p>$8.99</p>
+            </li>
+        </ul>
+    </section>
+
+    <section class="section contact" id="contact">
+        <h2>Contact Us</h2>
+        <form class="contact-form" id="contactForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Delicious Eats. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Thank you for your message!');
+        });
+    </script>
+</body>
+</html>
